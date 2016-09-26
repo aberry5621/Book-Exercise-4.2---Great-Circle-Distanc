@@ -17,9 +17,10 @@ int main() {
     double x2 = 0.0;
     double y2 = 0.0;
     
+    const double PI = 3.14159;
     const double EARTH_RADIUS = 6378.1;
     
-    double d = 0.0;
+    double diameter = 0.0;
     
     
     cout << "Enter point 1 (latitude and longitude) in degrees: ";
@@ -28,8 +29,9 @@ int main() {
     cout << "Enter point 2 (latitude and longitude) in degrees: ";
     cin >> x2 >> y2;
     
+    double a = sin(x1), b = sin(x2), c = cos(x1), d = cos(x2), e = cos(y1 - y2);
     
-    d = EARTH_RADIUS * acos((sin(x1) * sin(x2)) + (cos(x1) * cos(x2) * cos(y1 -y2)));
+    diameter = EARTH_RADIUS * acos(((a * b) + (c * d * e))*(180/PI));
     
     
     cout << "The distance between the points is: " << d << endl;
