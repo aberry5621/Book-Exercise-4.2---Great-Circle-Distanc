@@ -22,7 +22,6 @@ int main() {
     
     double diameter = 0.0;
     
-    
     cout << "Enter point 1 (latitude and longitude) in degrees: ";
     cin >> x1 >> y1;
     
@@ -35,7 +34,6 @@ int main() {
     
     
     cout << "The distance between the points is: " << d << endl;
-    
 
     
     return 0;
